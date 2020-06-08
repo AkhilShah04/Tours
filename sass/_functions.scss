@@ -1,0 +1,9 @@
+@function get-image($img) {
+    @return '../images/#{$img}';
+}
+
+// people use rem is so that the size scales better and is more "mobile friendly".
+@function px-to-rem($size) {
+    $value: $size / 16px;
+    @return #{$value}rem;
+}

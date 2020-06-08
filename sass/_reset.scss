@@ -1,0 +1,33 @@
+body, button, input { font-family: 'Questrial', sans-serif; }
+// CSS BOX MODEL: content --> padding --> border --> margin
+ul {
+    margin: 0;
+    padding: 0;
+}
+// The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges. visible -> The content is not clipped, and it may be rendered outside the left and right edges. This is default.	hidden ->	The content is clipped - and no scrolling mechanism is provided. scroll ->	The content is clipped and a scrolling mechanism is provided.	auto ->	Should cause a scrolling mechanism to be provided for overflowing boxes	initial	Sets this property to its default value. Read about initial. scrol,auto and visible, initial are almost the same.
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+// font-weight: normal|bold|bolder|lighter|number|initial|
+h1, h2, h3, h4, h5, h6, p, figure {
+    font-weight: normal;
+    margin: 0;
+}
+// Borders are lines drawn on the edge of your element, encasing the element’s content, but not ever going outside the element’s boundaries. Outlines, however, surround the element completely, meaning they do overstep the boundaries of the element to appear on the outside of it. The purpose of using outlines in CSS is often to give a particular emphasis to your elements.
+// border supports rounded corners. border has properties to style each side with border-top:, border-left:.
+// Outlines do not take up space. Outlines may be non-rectangular.
+button, input {
+    outline: none;
+    border: none;
+    color: inherit;
+}
+// text-decoration: overline, underline, underline overline,line-through
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p, a, button, input {
+    font-size: px-to-rem(18px);
+}

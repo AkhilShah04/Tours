@@ -1,0 +1,75 @@
+
+@keyframes intro-content {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes intro-header {
+    0% { transform: translateY(40px) scale(.6); }
+    100% { transform: translate(0) scale(1); }
+}
+
+// background-size -->  auto ->	Default value. The background image is displayed in its original size. length ->	Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". percentage ->	Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto".	cover	-> Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges	contain	Resize the background image to make sure the image is fully visible.	initial->	Sets this property to its default value.
+
+// background-attachment --> scroll	-> The background image will scroll with the page. This is default. fixed	-> The background image will not scroll with the page. local ->	The background image will scroll with the element's contents. initial ->	Sets this property to its default value.
+
+ // vh takes the 100 % of the screen. We dont use vh for because then comes the scrollbar of moving left to right. Hence always use % with width.
+#bg {
+    background-image: url(get-image("bg.jpg"));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+}
+// Block, for sections in a webpage; Inline, for text; Table, for two-dimensional table data; Positioned, for explicit position of an element. Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+// The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
+#landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    transition: all .4s;
+    position: relative;
+    z-index: 10;
+
+    animation-name: intro-content;
+    animation-duration: 1.4s;
+    animation-delay: .1s;
+    animation-fill-mode: both;
+
+    h1 {
+        font-size: px-to-rem(48px);
+        margin-bottom: px-to-rem(16px);
+
+        animation-name: intro-header;
+        animation-duration: 1s;
+        animation-delay: .1s;
+    }
+
+    p {
+        width: 36vw;
+        text-align: center;
+        line-height: 190%;
+    }
+// When using the opacity property to add transparency to the background of an element
+    button {
+        color: #425831;
+        background-color: white;
+        padding: .6em 4.2em;
+        border-radius: 4px;
+        margin-top: px-to-rem(14px);
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+
+
+}
